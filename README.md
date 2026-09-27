@@ -105,6 +105,8 @@ settings.env.sample   every setting in one file (copy to settings.env, which is 
 
 ## Useful links
 
+- Slides from the session: [docs/CDC2026_Okutucu_MCP-Azure-Functions.pptx](docs/CDC2026_Okutucu_MCP-Azure-Functions.pptx)
+
 - Remote MCP servers on Azure Functions: <https://aka.ms/remote-mcp>
 - Azure Functions MCP extension: <https://github.com/Azure/azure-functions-mcp-extension>
 - Tutorial: <https://learn.microsoft.com/azure/azure-functions/functions-mcp-tutorial>
