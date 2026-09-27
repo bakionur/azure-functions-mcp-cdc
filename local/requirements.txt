@@ -1,0 +1,2 @@
+mcp>=2.2,<3
+tzdata  # zoneinfo data for Europe/Berlin on any image

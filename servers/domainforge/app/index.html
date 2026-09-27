@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>DomainForge Picker</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin:0; font-family: Inter, system-ui, sans-serif; background:#fbf4ec; color:#1c1108; padding:12px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:10px; }
+  .card { border:1px solid #e6d8c8; border-radius:12px; padding:12px; background:#fffdf9; display:flex; flex-direction:column; gap:8px; }
+  .name { font-weight:700; font-size:15px; word-break:break-all; }
+  .badge { font-size:11px; border-radius:999px; padding:2px 8px; width:max-content; }
+  .available { background:#1a9a8f; color:#fff; } .taken { background:#b83a08; color:#fff; } .unknown { background:#c9b8a8; }
+  button { background:#d4460c; color:#fff; border:0; border-radius:8px; padding:6px 10px; cursor:pointer; font-weight:600; }
+  button:disabled { background:#c9b8a8; cursor:default; }
+  .reserved { border-color:#1a9a8f; box-shadow:0 0 0 2px #1a9a8f inset; }
+  h3 { margin:0 0 10px; font-weight:600; }
+</style></head>
+<body>
+  <h3 id="title">Waiting for check_domains…</h3>
+  <div class="grid" id="grid"></div>
+  <script type="module" src="/src/main.js"></script>
+</body></html>

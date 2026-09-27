@@ -1,0 +1,28 @@
+name: cdc-mcp-demo
+infra:
+  provider: bicep
+  path: infra
+services:
+  concierge:            # Demo 1: the SAME local/server.py, self-hosted on Functions (MCP SDK server)
+    project: ./local
+    language: python
+    host: function
+  ado:                  # Demo 3: Entra-protected
+    project: ./servers/ado
+    language: python
+    host: function
+  skywatch:             # Demo 2: MCP App radar
+    project: ./servers/skywatch
+    language: python
+    host: function
+  domainforge:          # Demo 2 + 4: MCP App picker, blob output binding, Foundry agent tool
+    project: ./servers/domainforge
+    language: python
+    host: function
+hooks:
+  prepackage:           # widgets must exist in app/dist before packaging (azd packages in parallel with provision)
+    windows: { shell: pwsh, run: ./scripts/build-apps.ps1 }
+    posix:   { shell: sh,   run: ./scripts/build-apps.sh }
+  postdeploy:           # .vscode/mcp.json (keys stay local) + Foundry agent
+    windows: { shell: pwsh, run: ./scripts/postdeploy.ps1 }
+    posix:   { shell: sh,   run: ./scripts/postdeploy.sh }

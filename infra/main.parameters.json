@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentName": { "value": "${AZURE_ENV_NAME}" },
+    "location": { "value": "${AZURE_LOCATION}" },
+    "principalId": { "value": "${AZURE_PRINCIPAL_ID}" },
+    "adoOrgUrl": { "value": "${ADO_ORG_URL}" },
+    "adoProject": { "value": "${ADO_PROJECT}" },
+    "adoTeam": { "value": "${ADO_TEAM}" },
+    "homeLat": { "value": "${HOME_LAT=50.1329}" },
+    "homeLon": { "value": "${HOME_LON=8.9169}" },
+    "enableEntraAuth": { "value": "${ENABLE_ENTRA_AUTH=true}" },
+    "enableApiCenter": { "value": "${ENABLE_API_CENTER=true}" },
+    "enableFoundry": { "value": "${ENABLE_FOUNDRY=true}" },
+    "enableApim": { "value": "${ENABLE_APIM=false}" },
+    "apimPublisherEmail": { "value": "${APIM_PUBLISHER_EMAIL=demo@example.com}" }
+  }
+}

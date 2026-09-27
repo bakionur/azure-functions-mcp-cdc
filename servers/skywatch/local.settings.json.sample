@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "ADO_ORG_URL": "https://dev.azure.com/<your-org>",
+    "ADO_PROJECT": "<your-project>",
+    "ADO_TEAM": "",
+    "HOME_LAT": "50.1329",
+    "HOME_LON": "8.9169",
+    "HOME_NAME": "Congress Park Hanau",
+    "RESERVATIONS_CONTAINER": "reservations"
+  }
+}

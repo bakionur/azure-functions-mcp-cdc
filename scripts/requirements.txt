@@ -1,0 +1,5 @@
+# scripts/foundry_agent.py + scripts/mcp_probe.py (not deployed anywhere)
+azure-ai-projects==2.7.0
+azure-identity>=1.25
+openai>=3.19,<4
+requests>=2.34

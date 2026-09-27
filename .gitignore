@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+local.settings.json
+.azure/
+servers/*/app/node_modules/
+servers/*/app/dist/
+.DS_Store
+.vscode/mcp.json
+settings.env

@@ -1,0 +1,4 @@
+azure-functions>=2.3.0,<3
+mcp>=2.2,<3
+requests>=2.34
+Pillow>=12

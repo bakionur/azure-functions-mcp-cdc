@@ -1,0 +1,22 @@
+{
+  "version": "2.0",
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    }
+  },
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[4.0.0, 5.0.0)"
+  },
+  "extensions": {
+    "mcp": {
+      "serverName": "domainforge",
+      "serverVersion": "1.1.0",
+      "instructions": "Pun domain names for a business in a city. Flow: brainstorm_domains, then check_domains (renders a picker), then reserve_domain only after the user picks one."
+    }
+  }
+}

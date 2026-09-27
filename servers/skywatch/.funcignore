@@ -1,0 +1,8 @@
+.venv
+.git*
+__pycache__
+local.settings.json*
+app/node_modules
+app/src
+app/package*.json
+app/vite.config.*
