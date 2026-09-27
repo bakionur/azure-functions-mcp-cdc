@@ -40,7 +40,7 @@ and is deleted on its own.
 ## Quick start
 
 ```bash
-git clone <this repo> && cd <repo>
+git clone https://github.com/bakionur/azure-functions-mcp-cdc && cd azure-functions-mcp-cdc
 cp settings.env.sample settings.env        # fill in subscription, tenant, optional ADO org/project
 python3.13 -m venv .venv && source .venv/bin/activate      # PowerShell: ./.venv/bin/Activate.ps1
 pip install -r scripts/requirements.txt -r local/requirements.txt
