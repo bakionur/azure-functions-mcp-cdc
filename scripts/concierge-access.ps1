@@ -1,5 +1,5 @@
 # Switch the concierge (self-hosted MCP server) between public and key-protected, no redeploy.
-#   ./scripts/concierge-access.ps1 public      # anyone with the URL (Claude / ChatGPT connectors, the audience)
+#   ./scripts/concierge-access.ps1 public      # anyone with the URL (chat-app custom connectors, the audience)
 #   ./scripts/concierge-access.ps1 protected   # function key required again (default)
 #   ./scripts/concierge-access.ps1 status
 # How: app setting AzureFunctionsJobHost__customHandler__http__defaultAuthorizationLevel overrides
