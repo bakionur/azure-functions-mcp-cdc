@@ -68,6 +68,9 @@ Tear down: `azd down --purge` (the Entra app registrations remain; delete them i
 Foundry: `python scripts/foundry_agent.py ask "What is flying over Hanau, and name a pizza place after the nearest airline?"`
 API Center registry (Entra sign-in): `python scripts/registry.py`
 
+Make the concierge public for a while (e.g. to add it to a chat app as a custom connector), then back:
+`./scripts/concierge-access.sh public` · `protected` · `status` (PowerShell: `concierge-access.ps1`).
+
 ## Security model
 
 - **No secrets in the repo, in app settings or in the client for the Entra path.** Storage and telemetry use a
