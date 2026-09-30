@@ -11,16 +11,16 @@ if [ -n "${MCP_SKYWATCH_URL:-}" ]; then
   ado_headers=""
   [ "$ADO_AUTH_MODE" = "key" ] && ado_headers=", \"headers\": { \"x-functions-key\": \"$(key "$APP_ADO" systemKeys.mcp_extension)\" }"
   remote=",
-    \"concierge-remote\":   { \"type\": \"http\", \"url\": \"$MCP_CONCIERGE_URL\", \"headers\": { \"x-functions-key\": \"$(key "$APP_CONCIERGE" functionKeys.default)\" } },
-    \"adopilot-remote\":    { \"type\": \"http\", \"url\": \"$MCP_ADO_URL\"$ado_headers },
-    \"skywatch-remote\":    { \"type\": \"http\", \"url\": \"$MCP_SKYWATCH_URL\", \"headers\": { \"x-functions-key\": \"$(key "$APP_SKYWATCH" systemKeys.mcp_extension)\" } },
-    \"domainforge-remote\": { \"type\": \"http\", \"url\": \"$MCP_DOMAINFORGE_URL\", \"headers\": { \"x-functions-key\": \"$(key "$APP_DOMAINFORGE" systemKeys.mcp_extension)\" } }"
+    \"cdc-concierge-remote\":   { \"type\": \"http\", \"url\": \"$MCP_CONCIERGE_URL\", \"headers\": { \"x-functions-key\": \"$(key "$APP_CONCIERGE" functionKeys.default)\" } },
+    \"cdc-adopilot-remote\":    { \"type\": \"http\", \"url\": \"$MCP_ADO_URL\"$ado_headers },
+    \"cdc-skywatch-remote\":    { \"type\": \"http\", \"url\": \"$MCP_SKYWATCH_URL\", \"headers\": { \"x-functions-key\": \"$(key "$APP_SKYWATCH" systemKeys.mcp_extension)\" } },
+    \"cdc-domainforge-remote\": { \"type\": \"http\", \"url\": \"$MCP_DOMAINFORGE_URL\", \"headers\": { \"x-functions-key\": \"$(key "$APP_DOMAINFORGE" systemKeys.mcp_extension)\" } }"
 fi
 cat > .vscode/mcp.json << JSON
 {
   "servers": {
     "cdc-concierge-local": { "type": "stdio", "command": "$py", "args": ["\${workspaceFolder}/local/server.py"] },
-    "skywatch-localhost":  { "type": "http", "url": "http://localhost:7071/runtime/webhooks/mcp" }${remote:-}
+    "cdc-skywatch-localhost":  { "type": "http", "url": "http://localhost:7071/runtime/webhooks/mcp" }${remote:-}
   }
 }
 JSON

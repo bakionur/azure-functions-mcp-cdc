@@ -15,4 +15,4 @@ az group create -n $e.AZURE_RESOURCE_GROUP.Trim('"') -l $e.AZURE_LOCATION.Trim('
 azd up --no-prompt
 if ($LASTEXITCODE) { throw "azd up failed" }
 python ./scripts/smoke.py
-Write-Host "`nDone. VS Code → Copilot Chat → Configure Tools: 6 MCP servers. Sign in to adopilot-remote once (Entra)." -ForegroundColor Green
+Write-Host "`nDone. VS Code → Copilot Chat → Configure Tools: 6 MCP servers. Sign in to cdc-adopilot-remote once (Entra)." -ForegroundColor Green
